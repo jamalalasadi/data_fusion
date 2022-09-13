@@ -21,7 +21,6 @@ import sys
 from sklearn.metrics import roc_auc_score
 
 
-
 def conf_mat_param(pred_labels,true_labels):
     # True Positive (TP): we predict a label of 1 (positive), and the true label is 1.
     TP = np.sum(np.logical_and(pred_labels == 1, true_labels == 1))  # True Negative (TN): we predict a label of 0 (negative), and the true label is 0.
@@ -159,8 +158,6 @@ for iter in range(number_iter):
             train_labels_all.append(1)
             lable_train_male.append(1)
 
-
-
     audio_features_female = []
     text_features_female = []
     vedio_features_female = []
@@ -231,7 +228,6 @@ for iter in range(number_iter):
     w_text = w_text/s
     w_vedio = w_vedio/s
 
-
     ################################ Testing
 
     text_features_test_male = []
@@ -245,8 +241,6 @@ for iter in range(number_iter):
     text_features_test_all = []
     audio_features_test_all = []
     vedio_features_test_all = []
-
-
 
     labels_test_male = []
     labels_test_female = []
@@ -272,8 +266,6 @@ for iter in range(number_iter):
             labels_test_all.append(1)
             labels_test_male.append(1)
 
-
-
     # Extracting features from female dataset
     for i in train_iter_female:
         lst = Data_female.iloc[i].values.tolist()
@@ -293,8 +285,6 @@ for iter in range(number_iter):
             labels_test_all.append(1)
             labels_test_female.append(1)
 
-
-
     # Finding accuracies and confusion matrix for audio
     acc_test_audio_all.append(accuracy_score(labels_test_all,clf_audio.predict(audio_features_test_all))) # accuracy for all5
 
@@ -312,9 +302,7 @@ for iter in range(number_iter):
     auc_test_audio_female.append(roc_auc_score(labels_test_female,y_test_audio_female_p)) # auc audio male
     auc_test_audio_male.append(roc_auc_score(labels_test_male,y_test_audio_male_p)) # auc audio male
 
-    
-
-    
+       
     # print ('------------------------')
     # 
     # 
@@ -355,7 +343,6 @@ for iter in range(number_iter):
     
     auc_test_vedio_female.append(roc_auc_score(labels_test_female,y_test_vedio_female_p)) # auc audio male
     auc_test_vedio_male.append(roc_auc_score(labels_test_male,y_test_vedio_male_p)) # auc audio male
-
 
 ## Majoruty voting
     y_majority_female = y_test_text_female+y_test_audio_female+y_test_vedio_female
