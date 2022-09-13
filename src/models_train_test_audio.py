@@ -54,10 +54,6 @@ Random_clf.fit(features,labels)
             
 ################################
 
-
-
-
-
 filepath_test = '/home/jamal/Documents/support vector /Re%3a_Cyberbullying_dataset/audio_test_df_new.csv'
 Data_test = pd.read_csv(filepath_test,delimiter = ',',names = col)
 features_test = []
