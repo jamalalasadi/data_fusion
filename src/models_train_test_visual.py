@@ -83,8 +83,6 @@ print('precision score ',met.precision_score(labels_test,y_test))
 print('recall score', met.recall_score(labels_test,y_test))
 print('f1 score',met.f1_score(labels_test,y_test))
 
-
-
 y_test = clf2.predict(features_test)# logistic regression model test
 acc = accuracy_score(labels_test,y_test)
 print('logistic regression')
@@ -93,7 +91,6 @@ print(mt.confusion_matrix(labels_test,y_test))
 print('precision score ',met.precision_score(labels_test,y_test))
 print('recall score', met.recall_score(labels_test,y_test))
 print('f1 score',met.f1_score(labels_test,y_test))
-
 
 y_test = clf.predict(features_test) # K _ nearest neighbor model test
 acc = accuracy_score(labels_test,y_test)
@@ -113,8 +110,6 @@ print(mt.confusion_matrix(labels_test,y_test))
 print('precision score ',met.precision_score(labels_test,y_test))
 print('recall score', met.recall_score(labels_test,y_test))
 print('f1 score',met.f1_score(labels_test,y_test))
-
-
 
 y_test = Random_clf.predict(features_test)# Random Forest model test
 acc = accuracy_score(labels_test,y_test)
