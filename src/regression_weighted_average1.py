@@ -28,10 +28,8 @@ def conf_mat_param(pred_labels,true_labels):
     FN = np.sum(np.logical_and(pred_labels == -1, true_labels == 1)) 
     return (TP,FP,TN,FN)
     
-    
-    
+      
 filepath = '/home/jamal/Desktop/Research three/support vector /Final (1).csv'
-
 
 col=['AUDIO_text_len','AUDIO_text_sentiment','AUDIO_percent_bad_words','AUDIO_valence','AUDIO_arousal','AUDIO_speech_percent','AUDIO_music_percent','ADIO_silence_percent','AUDIO_loudness','AUDIO_glove1','AUDIO_glove2','AUDIO_glove3','TEXT_text_len','TEXT_percent_punctuation','TEXT_percent_uppercase','TEXT_text_sentiment','TEXT_percent_bad_words','TEXT_valence','TEXT_arousal','TEXT_glove1','TEXT_glove2','TEXT_glove3','VISUAL_num_faces','VISUAL_valence','VISUAL_arousal','VISUAL_gore','VISUAL_explicit','VISUAL_drug','VISUAL_suggestive','VISUAL_ocr_len','VISUAL_labels1','VISUAL_labels2','VISUAL_labels3','Victim','bully']
 
@@ -70,7 +68,6 @@ for i in train_iter:
 clf_audio =  GaussianNB().fit(audio_features,labels)# calculate the probability of classes (audio) 
 clf_text =  GaussianNB().fit(text_features,labels)# calculate the probability of classes (text) 
 clf_vedio =  GaussianNB().fit(vedio_features,labels)# calculate the probability of classes (vedio)
-
 
 
 # clf_audio =  LogisticRegression( class_weight='balanced', solver = 'lbfgs').fit(audio_features,labels)# logistic regression model for audio
