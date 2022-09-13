@@ -19,7 +19,6 @@ plt.scatter(x=X[:, 0], y=X[:, 1])
 
 file_path ='/home/jamal/Documents/support vector /Re%3a_Cyberbullying_dataset/text_train_5_df.txt'
 
-
 class SVM(nn.Module):
     """
     Linear Support Vector Machine
@@ -42,8 +41,7 @@ class SVM(nn.Module):
     plt.scatter(x=X[:, 0], y=X[:, 1])  # After feature scaling
     plt.scatter(x=data[:, 0], y=data[:, 1], c='r')  # Before feature scalin
     
-    
-    
+       
 learning_rate = 0.1  # Learning rate
 epoch = 10  # Number of epochs
 batch_size = 1  # Batch size
@@ -76,8 +74,7 @@ for epoch in range(epoch):
         sum_loss += loss[1].data.cpu().numpy()  # Add the loss
         
     print("Epoch {}, Loss: {}".format(epoch, sum_loss[1]))
-    
-    
+        
     f = open('/home/jamal/Documents/support vector /Re%3a_Cyberbullying_dataset/text_train_5_df.txt', 'r')
 
     rows = []
