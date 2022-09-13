@@ -346,19 +346,6 @@ for iter in range(number_iter):
     y_p_average_male_auc.append(accuracy_score(labels_test_male,y_p_average_male))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 print("mean accuracy female text---------------:",np.mean(acc_text_female))
 print("mean auc female text---------------:",np.mean(auc_test_text_female))
 
@@ -366,8 +353,6 @@ print("mean accuracy male text---------------:",np.mean(acc_text_male))
 print("mean auc male text---------------:",np.mean(auc_test_text_male))
 
 print ("---------------")
-
-
 
 print("mean accuracy female audio---------------:",np.mean(acc_audio_female))
 print("mean auc female audio---------------:",np.mean(auc_test_audio_female))
